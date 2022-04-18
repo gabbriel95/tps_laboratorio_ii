@@ -15,12 +15,10 @@ namespace MiCalculadora
     public partial class FormCalculadora : Form
     {
 
-        Operando num1;
-        Operando num2;
+    
         public FormCalculadora()
         {
-            this.num1 = new Operando();
-            this.num2 = new Operando();
+       
             StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
         }
@@ -37,11 +35,10 @@ namespace MiCalculadora
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            this.num1 = new Operando(txtNumber1.Text);
-            this.num2 = new Operando(txtNumber2.Text);
-
-            double resultado = Calculadora.Operar(num1, num2, char.Parse(cmbOperador.Text));
+   
+            double resultado = Operar2(txtNumber1.Text, txtNumber2.Text, cmbOperador.Text);
             lblResultado.Text = resultado.ToString();
+            this.lstOperaciones.Text = $"{txtNumber1.Text} + {txtNumber2.Text} = {resultado.ToString()} ";
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -81,7 +78,6 @@ namespace MiCalculadora
             cmbOperador.Text = "";
             lvlError.Visible = false;
             lvlError2.Visible = false;
-            lblRequeridos.Visible = false;
 
         }
 
@@ -122,6 +118,16 @@ namespace MiCalculadora
             }
         }
 
+        public static double Operar2(string numero1, string numero2, string operador) 
+        {
+            Operando num1;
+            Operando num2;
+
+            num1 = new Operando(numero1);
+            num2 = new Operando(numero2);
+
+            return Calculadora.Operar(num1, num2, char.Parse(operador));
+        }
       
     }
 }

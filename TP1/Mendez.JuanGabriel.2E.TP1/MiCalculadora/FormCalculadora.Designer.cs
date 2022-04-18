@@ -41,8 +41,7 @@
             this.lvlError = new System.Windows.Forms.Label();
             this.lvlError2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.lblTittleResult = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lstOperaciones = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // cmbOperador
@@ -123,9 +122,9 @@
             // lblResultado
             // 
             this.lblResultado.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblResultado.Location = new System.Drawing.Point(510, 178);
+            this.lblResultado.Location = new System.Drawing.Point(266, 37);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(278, 62);
+            this.lblResultado.Size = new System.Drawing.Size(197, 33);
             this.lblResultado.TabIndex = 8;
             // 
             // lvlError
@@ -155,31 +154,21 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // lblTittleResult
+            // lstOperaciones
             // 
-            this.lblTittleResult.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTittleResult.Location = new System.Drawing.Point(558, 143);
-            this.lblTittleResult.Name = "lblTittleResult";
-            this.lblTittleResult.Size = new System.Drawing.Size(148, 35);
-            this.lblTittleResult.TabIndex = 11;
-            this.lblTittleResult.Text = "Resultado:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "label1";
+            this.lstOperaciones.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lstOperaciones.Location = new System.Drawing.Point(479, 55);
+            this.lstOperaciones.Name = "lstOperaciones";
+            this.lstOperaciones.Size = new System.Drawing.Size(235, 243);
+            this.lstOperaciones.TabIndex = 12;
+            this.lstOperaciones.Text = "";
             // 
             // FormCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblTittleResult);
+            this.Controls.Add(this.lstOperaciones);
             this.Controls.Add(this.lvlError2);
             this.Controls.Add(this.lvlError);
             this.Controls.Add(this.lblResultado);
@@ -218,7 +207,6 @@
         private System.Windows.Forms.Label lvlError;
         private System.Windows.Forms.Label lvlError2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Label lblTittleResult;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RichTextBox lstOperaciones;
     }
 }
