@@ -21,7 +21,9 @@ namespace Entidades
             Numero = strNumero;
         }
 
-
+        /// <summary>
+        /// Asigna un valor al atributo numero
+        /// </summary>
         public string Numero
         {
             set
@@ -75,7 +77,11 @@ namespace Entidades
 
             return resultado;
         }
-
+        /// <summary>
+        /// Convierte un numero binario a decimal
+        /// </summary>
+        /// <param name="binario"></param>
+        /// <returns>Si era binario y pudo pasarlo a decimal devuelve un string con el numero, sino Valor invalido</returns>
         public static string BinarioDecimal(string binario)
         {
             string numeroString = binario.ToString();
@@ -97,7 +103,11 @@ namespace Entidades
 
             return "Valor invalido";
         }
-
+        /// <summary>
+        /// Pasa un numero decimal a binario
+        /// </summary>
+        /// <param name="numeroEntero"></param>
+        /// <returns></returns>
         public static string DecimalBinario(double numeroEntero)
         {
             string numeroBinario = "";
@@ -122,7 +132,11 @@ namespace Entidades
 
             return "Valor invalido";
         }
-
+        /// <summary>
+        /// Pasa un numero decimal a binario
+        /// </summary>
+        /// <param name="numero"></param>
+        /// <returns></returns>
         public static string DecimalBinario(string numero)
         {
             double num;
@@ -136,7 +150,11 @@ namespace Entidades
             return "Valor invalido";
         }
 
-
+        /// <summary>
+        /// Revierte un string de char
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         private static string Reverse(string text)
         {
             char[] charArray = text.ToCharArray();
