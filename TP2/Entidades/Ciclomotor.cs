@@ -28,7 +28,7 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine("CICLOMOTOR");
-            sb.AppendLine(this.Mostrar());
+            sb.AppendLine(base.Mostrar());
             sb.AppendFormat("TAMAÑO : {0}", this.Tamanio);
             sb.AppendLine("");
             sb.AppendLine("---------------------");

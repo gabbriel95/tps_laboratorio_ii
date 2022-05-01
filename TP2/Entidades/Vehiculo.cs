@@ -52,7 +52,7 @@ namespace Entidades
             return (string)this;
         }
 
-        private static explicit operator string(Vehiculo p)
+        public static explicit operator string(Vehiculo p)
         {
             StringBuilder sb = new StringBuilder();
 
@@ -83,6 +83,16 @@ namespace Entidades
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
         {
             return (v1.chasis == v2.chasis);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this == (Vehiculo)obj;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }
